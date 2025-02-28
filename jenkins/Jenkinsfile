@@ -36,5 +36,10 @@ pipeline {
                 sh 'ps -eaf'
             }
     }
+        stage ('CPU') {
+            steps {
+               sh 'lscpu'
+            }
+        }
 }
 }
