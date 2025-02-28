@@ -31,10 +31,5 @@ pipeline {
                 sh 'df -kh'
             }
         }
-        stage ('process running') {
-            steps {
-                sh 'ps -eaf'
-            }
-    }
 }
 }
