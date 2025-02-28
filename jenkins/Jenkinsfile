@@ -1,0 +1,39 @@
+pipeline {
+    agent any
+    stages {
+        stage ('Hello') {
+            steps {
+                echo "Hello world"
+            }
+        }
+        stage ('Time') {
+            steps {
+                sh 'uptime'
+            }
+        }
+        stage ('Hostname') {
+            steps {
+               sh 'hostname'
+            }
+        }
+        stage ('Serveripaddress') {
+            steps {
+                sh 'hostname'
+            }
+        }
+        stage ('Ram usage') {
+            steps {
+                sh 'free -gh'
+            }
+        }
+        stage ('Disc-usage') {
+            steps {
+                sh 'df -kh'
+            }
+        }
+        stage ('process running') {
+            steps {
+                sh 'ps -eaf'
+            }
+    }
+}
